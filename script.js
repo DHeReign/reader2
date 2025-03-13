@@ -8,9 +8,22 @@ const settingsElement = rootElement.querySelector(".settings");
 const colorInput = rootElement.querySelector(".settings__font-color");
 const settingsIntervalInput = rootElement.querySelector(".settings__interval");
 const fontChangeSelect = rootElement.querySelector('.settings__font-change');
+const texts = rootElement.querySelectorAll('.text');
+const settingsBackColorInputs = rootElement.querySelectorAll('.settings__back-color');
 
+form.addEventListener("change", (event) => {
+    rootElement.style.fontFamily = `'${fontChangeSelect.value}', sans-serif`;
+    rootElement.style.fontSIze = fontSize.value + "px";
+    rootElement.style.color = colorInput.value;
 
+    texts.forEach((item) => {
+        item.style.lineHeight = settingsIntervalInput.value;
+    })
 
+    settingsBackColorInputs.forEach((item) => {
+        item.style.backgroundColor = item.value;
+    })
+})
 
 
 
