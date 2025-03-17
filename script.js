@@ -21,7 +21,9 @@ form.addEventListener("change", (event) => {
     })
 
     settingsBackColorInputs.forEach((item) => {
-        item.style.backgroundColor = item.value;
+        if(item.cheked) {
+            RootElement.style.backgroundColor = item.value;
+        }
     })
 })
 
