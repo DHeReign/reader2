@@ -13,7 +13,7 @@ const settingsBackColorInputs = rootElement.querySelectorAll('.settings__back-co
 
 form.addEventListener("change", () => {
     rootElement.style.fontFamily = `'${fontChangeSelect.value}', sans-serif`;
-    rootElement.style.fontSIze = fontSize.value + "px";
+    rootElement.style.fontSize = fontSize.value + "px";
     rootElement.style.color = colorInput.value;
 
     texts.forEach((item) => {
@@ -21,7 +21,7 @@ form.addEventListener("change", () => {
     })
 
     settingsBackColorInputs.forEach((item) => {
-        if(item.cheked) {
+        if(item.checked) {
             rootElement.style.backgroundColor = item.value;
         }
     })
